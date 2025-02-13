@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+.header-main {
+  width: 100%;
+  @include flex($direction: column);
+
+  // Navbar mobile
+  &__top {
+    padding: 16px;
+    height: 80px;
+    .nav-mobile {
+      @include flex($align: center, $justify: space-between);
+
+      &__logo {
+        color: $logo-color;
+        font-weight: bold;
+        font-size: pxToRem(18);
+        line-height: pxToRem(20);
+        width: pxToRem(143);
+        @include flex($align: center, $gap: pxToRem(4));
+        span {
+          width: pxToRem(115);
+        }
+      }
+    }
+  }
+}
