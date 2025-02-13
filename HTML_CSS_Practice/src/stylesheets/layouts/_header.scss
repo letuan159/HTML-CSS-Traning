@@ -3,24 +3,71 @@
 .header-main {
   width: 100%;
   @include flex($direction: column);
-
+  .tablet,
+  .desktop {
+    display: none;
+  }
   // Navbar mobile
   &__top {
     padding: 16px;
     height: 80px;
     .nav-mobile {
       @include flex($align: center, $justify: space-between);
-
       &__logo {
+        height: 24px;
         color: $logo-color;
         font-weight: bold;
         font-size: pxToRem(18);
-        line-height: pxToRem(20);
         width: pxToRem(143);
         @include flex($align: center, $gap: pxToRem(4));
+        picture {
+          height: 24px;
+        }
         span {
           width: pxToRem(115);
         }
+      }
+    }
+
+    // Navbar tablet
+    @include tablet {
+      .tablet {
+        @include flex($align: center, $justify: center, $gap: 16px);
+        width: 437.5px;
+        height: 48px;
+
+        //Button login & Free Trial
+        .btn {
+          &-login,
+          &-free_trial {
+            font-family: inherit;
+            height: 30px;
+            border-radius: 0px;
+            padding: 2px 15px;
+            font-size: 14px;
+            font-weight: $medium;
+            letter-spacing: 0.5px;
+            line-height: 100%;
+            border: 2px #0f62fe solid;
+          }
+
+          &-login {
+            background-color: white;
+            color: #0f62fe;
+          }
+
+          &-free_trial {
+            background-color: #0f62fe;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    //Navbar Desktop
+    @include desktop {
+      .nav-mobile__plus {
+        display: none;
       }
     }
   }
