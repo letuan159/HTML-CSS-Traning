@@ -3,16 +3,21 @@
 .header-main {
   width: 100%;
   @include flex($direction: column);
-  .tablet,
-  .desktop {
-    display: none;
-  }
+
   // Navbar mobile
   &__top {
     padding: 16px;
     height: 80px;
-    .nav-mobile {
+    border-bottom: #dde1e6 1px solid;
+
+    .nav {
       @include flex($align: center, $justify: space-between);
+
+      &__buttons-tablet,
+      &__list {
+        display: none;
+      }
+
       &__logo {
         height: 24px;
         width: pxToRem(143);
@@ -25,15 +30,15 @@
 
     // Navbar tablet
     @include tablet {
-      .tablet {
+      .nav__buttons-tablet {
         @include flex($align: center, $justify: center, $gap: 16px);
         width: 437.5px;
         height: 48px;
 
         //Button login & Free Trial
         .btn {
-          &-login,
-          &-free_trial {
+          &__login,
+          &__free-trial {
             font-family: inherit;
             height: 30px;
             border-radius: 0px;
@@ -41,18 +46,23 @@
             font-size: 14px;
             font-weight: $medium;
             letter-spacing: 0.5px;
-            line-height: 100%;
             border: 2px #0f62fe solid;
+            cursor: pointer;
           }
 
-          &-login {
+          &__login {
             background-color: white;
             color: #0f62fe;
           }
 
-          &-free_trial {
+          &__free-trial {
             background-color: #0f62fe;
             color: #ffffff;
+          }
+
+          &__login:active,
+          &__free-trial:active {
+            opacity: 0.5;
           }
         }
       }
@@ -60,9 +70,57 @@
 
     //Navbar Desktop
     @include desktop {
-      .nav-mobile {
+      padding: 16px 80px;
+      .nav {
+        &__mobile {
+          display: none;
+        }
         &__plus {
           display: none;
+        }
+
+        h1 {
+          width: 437.5px;
+        }
+
+        &__list {
+          @include flex($align: center, $justify: center, $gap: 16px);
+
+          width: 357px;
+          height: 48px;
+
+          .link {
+            @include flex($align: center, $justify: center, $gap: 8px);
+
+            padding: 12px 8px;
+            font-size: 16px;
+            font-weight: $medium;
+            color: #21272a;
+
+            &__icon {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+        &__buttons-desktop {
+          @include flex($align: center, $justify: flex-end, $gap: 16px);
+          .btn {
+            &__login,
+            &__free-trial {
+              font-size: 16px;
+              height: 48px;
+              font-weight: $medium;
+              padding: 12px 16px;
+            }
+
+            &__login {
+              width: 103px;
+            }
+            &__free-trial {
+              width: 169px;
+            }
+          }
         }
       }
     }

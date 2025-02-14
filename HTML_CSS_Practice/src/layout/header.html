@@ -2,41 +2,50 @@
   <!-- Start of header top -->
   <div class="header-main__top">
     <!-- Mobile Navbar -->
-    <nav class="nav-mobile">
-      <a href="javascript:void(0)" class="nav-mobile__logo">
-        <picture>
-          <source
-            srcset="../assets/icons/logo-desktop.svg"
-            media="(min-width: 1200px)"
-          />
-          <img src="../assets/icons/logo-mobile.svg" alt="WebbyFrames Logo" />
-        </picture>
-      </a>
+    <nav class="nav">
+      <h1>
+        <a href="javascript:void(0)" class="nav__logo">
+          <picture>
+            <source
+              srcset="../assets/icons/logo-desktop.svg"
+              media="(min-width: 1200px)"
+            />
+            <img src="../assets/icons/logo-mobile.svg" alt="WebbyFrames Logo" />
+          </picture>
+        </a>
+      </h1>
 
-      <ul class="navigation-desktop">
+      <ul class="nav__list">
         <li>
-          <a href="javascript:void(0)">Eleven</a>
+          <a href="javascript:void(0)" class="link">Eleven</a>
         </li>
         <li>
-          <a href="javascript:void(0)">Twelve</a>
+          <a href="javascript:void(0)" class="link">Twelve</a>
         </li>
         <li>
-          <a href="javascript:void(0)">Thirteen</a>
+          <a href="javascript:void(0)" class="link">Thirteen</a>
         </li>
         <li>
-          <a href="javascript:void(0)">Sixteen</a>
+          <a href="javascript:void(0)" class="link">
+            Sixteen
+            <img
+              src="../assets/icons/arrow-down.svg"
+              alt=""
+              class="link__icon"
+            />
+          </a>
         </li>
       </ul>
 
-      <div class="nav-buttons tablet desktop">
-        <button class="btn-login">Log In</button>
-        <button class="btn-free_trial">Start free trial</button>
+      <div class="nav__buttons-tablet nav__buttons-desktop">
+        <button class="btn__login">Log In</button>
+        <button class="btn__free-trial">Start Free Trial</button>
       </div>
 
       <img
         src="../assets/icons/plus.svg"
         alt="Button group"
-        class="nav-mobile__plus"
+        class="nav__plus"
       />
     </nav>
   </div>
