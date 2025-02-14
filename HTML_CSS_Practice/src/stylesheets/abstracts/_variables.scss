@@ -1,9 +1,17 @@
 // Font family
-$primary-font: "Roboto";
+$primary-font: Roboto;
+
+// Font weight
+$medium: 500;
 
 // Breakpoints
-$tablet: 425px;
-$desktop: 1440px;
+$tablet: 600px;
+$desktop: 1200px;
 
-//Color
-$logo-color: #697077;
+// Color
+$pri-btn: #0f62fe;
+$sec-btn: #ffffff;
+
+$pri-text: #21272a;
+$sec-text: #697077;
+$cap: #001d6c;

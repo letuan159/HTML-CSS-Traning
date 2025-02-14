@@ -1,0 +1,42 @@
+@use "../abstracts/" as *;
+
+.btn {
+  @include flex($justify: center, $align: center);
+  font-family: inherit;
+  border-radius: 0px;
+  font-weight: $medium;
+  letter-spacing: 0.5;
+  border: 2px #0f62fe solid;
+  cursor: pointer;
+  width: 172.5px;
+  height: 40px;
+}
+
+.btn {
+  &-sec:active,
+  &-pri:active {
+    transition: active 0.2s ease;
+    opacity: 0.5;
+  }
+
+  &-sec:active {
+    background-color: $pri-btn;
+    color: $sec-btn;
+  }
+  &-pri:active {
+    background-color: $sec-btn;
+    color: $pri-btn;
+  }
+}
+
+.btn-pri {
+  padding: 16px 16px;
+  background-color: $pri-btn;
+  color: $sec-btn;
+}
+
+.btn-sec {
+  padding: 16px 12px;
+  background-color: $sec-btn;
+  color: $pri-btn;
+}
