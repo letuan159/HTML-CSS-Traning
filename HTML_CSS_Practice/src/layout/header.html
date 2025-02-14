@@ -2,13 +2,31 @@
   <!-- Start of header top -->
   <div class="header-main__top">
     <!-- Mobile Navbar -->
-    <nav class="nav-mobile nav-tablet">
+    <nav class="nav-mobile">
       <a href="javascript:void(0)" class="nav-mobile__logo">
         <picture>
-          <img src="../assets/icons/logo.svg" alt="WebbyFrames Logo" />
+          <source
+            srcset="../assets/icons/logo-desktop.svg"
+            media="(min-width: 1200px)"
+          />
+          <img src="../assets/icons/logo-mobile.svg" alt="WebbyFrames Logo" />
         </picture>
-        <span>WebbyFrames</span>
       </a>
+
+      <ul class="navigation-desktop">
+        <li>
+          <a href="javascript:void(0)">Eleven</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">Twelve</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">Thirteen</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">Sixteen</a>
+        </li>
+      </ul>
 
       <div class="nav-buttons tablet desktop">
         <button class="btn-login">Log In</button>

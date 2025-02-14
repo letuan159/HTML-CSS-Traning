@@ -15,16 +15,10 @@
       @include flex($align: center, $justify: space-between);
       &__logo {
         height: 24px;
-        color: $logo-color;
-        font-weight: bold;
-        font-size: pxToRem(18);
         width: pxToRem(143);
         @include flex($align: center, $gap: pxToRem(4));
         picture {
           height: 24px;
-        }
-        span {
-          width: pxToRem(115);
         }
       }
     }
@@ -66,8 +60,10 @@
 
     //Navbar Desktop
     @include desktop {
-      .nav-mobile__plus {
-        display: none;
+      .nav-mobile {
+        &__plus {
+          display: none;
+        }
       }
     }
   }
