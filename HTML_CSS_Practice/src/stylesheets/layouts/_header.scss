@@ -8,18 +8,93 @@
   &__top {
     padding: 16px;
     height: 80px;
-    .nav-mobile {
+    border-bottom: $bg-bot 1px solid;
+
+    .nav {
       @include flex($align: center, $justify: space-between);
 
+      &__buttons-tablet,
+      &__list {
+        display: none;
+      }
+
       &__logo {
-        color: $logo-color;
-        font-weight: bold;
-        font-size: pxToRem(18);
-        line-height: pxToRem(20);
+        height: 24px;
         width: pxToRem(143);
         @include flex($align: center, $gap: pxToRem(4));
-        span {
-          width: pxToRem(115);
+        picture {
+          height: 24px;
+        }
+      }
+    }
+
+    // Navbar tablet
+    @include tablet {
+      .nav__buttons-tablet {
+        @include flex($align: center, $justify: center, $gap: 16px);
+        width: 437.5px;
+        height: 48px;
+
+        .btn {
+          font-size: 14px;
+          padding: 13px 12px;
+
+          &-sec {
+            width: 75px;
+          }
+          &-pri {
+            width: 132px;
+          }
+        }
+      }
+    }
+
+    //Navbar Desktop
+    @include desktop {
+      padding: 16px 80px;
+      .nav {
+        &__mobile,
+        &__plus {
+          display: none;
+        }
+
+        h1 {
+          width: 437.5px;
+        }
+
+        &__list {
+          @include flex($align: center, $justify: center, $gap: 16px);
+
+          width: 357px;
+          height: 48px;
+
+          .link {
+            @include flex($align: center, $justify: center, $gap: 8px);
+
+            padding: 12px 8px;
+            font-size: 16px;
+            font-weight: $medium;
+            color: $pri-text;
+
+            &__icon {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+        &__buttons-desktop {
+          @include flex($align: center, $justify: flex-end, $gap: 16px);
+          .btn {
+            font-size: 16px;
+            height: 48px;
+            padding: 16px 12px;
+            &-sec {
+              width: 103px;
+            }
+            &-pri {
+              width: 169px;
+            }
+          }
         }
       }
     }
