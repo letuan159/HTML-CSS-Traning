@@ -8,7 +8,7 @@
   &__top {
     padding: 16px;
     height: 80px;
-    border-bottom: $bg-bot 1px solid;
+    border-bottom: $border-bot 1px solid;
 
     .nav {
       @include flex($align: center, $justify: space-between);
@@ -51,6 +51,7 @@
 
     //Navbar Desktop
     @include desktop {
+      gap: 24px;
       padding: 16px 80px;
       .nav {
         &__mobile,
@@ -98,5 +99,10 @@
         }
       }
     }
+  }
+
+  &__bottom {
+    height: 100px;
+    background-color: $bg-bot;
   }
 }
