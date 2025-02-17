@@ -21,7 +21,7 @@
       &__logo {
         height: 24px;
         width: pxToRem(143);
-        @include flex($align: center, $gap: pxToRem(4));
+        @include flex($align: center, $gap: 4px);
         picture {
           height: 24px;
         }
@@ -36,7 +36,7 @@
         height: 48px;
 
         .btn {
-          font-size: 14px;
+          font-size: pxToRem(14);
           padding: 13px 12px;
 
           &-sec {
@@ -59,7 +59,7 @@
           display: none;
         }
 
-        h1 {
+        &__logo {
           width: 437.5px;
         }
 
@@ -73,7 +73,7 @@
             @include flex($align: center, $justify: center, $gap: 8px);
 
             padding: 12px 8px;
-            font-size: 16px;
+            font-size: pxToRem(16);
             font-weight: $medium;
             color: $pri-text;
 
@@ -86,7 +86,7 @@
         &__buttons-desktop {
           @include flex($align: center, $justify: flex-end, $gap: 16px);
           .btn {
-            font-size: 16px;
+            font-size: pxToRem(16);
             height: 48px;
             padding: 16px 12px;
             &-sec {
