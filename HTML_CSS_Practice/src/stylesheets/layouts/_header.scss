@@ -8,7 +8,7 @@
   &__top {
     padding: 16px;
     height: 80px;
-    border-bottom: #dde1e6 1px solid;
+    border-bottom: $bg-bot 1px solid;
 
     .nav {
       @include flex($align: center, $justify: space-between);
@@ -74,7 +74,7 @@
             padding: 12px 8px;
             font-size: 16px;
             font-weight: $medium;
-            color: #21272a;
+            color: $pri-text;
 
             &__icon {
               width: 24px;
