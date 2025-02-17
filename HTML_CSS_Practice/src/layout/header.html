@@ -15,27 +15,13 @@
         </a>
       </h1>
 
-      <ul class="nav__list">
-        <li>
-          <a href="javascript:void(0)" class="link">Eleven</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="link">Twelve</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="link">Thirteen</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="link">
-            Sixteen
-            <img
-              src="../assets/icons/arrow-down.svg"
-              alt=""
-              class="link__icon"
-            />
-          </a>
-        </li>
-      </ul>
+      <include
+        src="./components/list.html"
+        locals='{
+          "list" : "[`abc`, `bcd`, `cde`, `def`]"
+        }'
+      >
+      </include>
 
       <div class="nav__buttons-tablet nav__buttons-desktop">
         <button class="btn btn-sec">Log In</button>
