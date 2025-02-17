@@ -13,20 +13,13 @@
         </picture>
       </a>
 
-      <ul class="navigation-desktop">
-        <li>
-          <a href="javascript:void(0)">Eleven</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">Twelve</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">Thirteen</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">Sixteen</a>
-        </li>
-      </ul>
+      <include
+        src="./components/list.html"
+        locals='{
+          "list" : "[`abc`, `bcd`, `cde`, `def`]"
+        }'
+      >
+      </include>
 
       <div class="nav-buttons tablet desktop">
         <button class="btn-login">Log In</button>
