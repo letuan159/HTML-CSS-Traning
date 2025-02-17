@@ -21,10 +21,10 @@
 
   &-sec:active {
     background-color: $pri-btn;
-    color: $sec-btn;
+    color: $default;
   }
   &-pri:active {
-    background-color: $sec-btn;
+    background-color: $default;
     color: $pri-btn;
   }
 }
@@ -32,11 +32,11 @@
 .btn-pri {
   padding: 16px 16px;
   background-color: $pri-btn;
-  color: $sec-btn;
+  color: $default;
 }
 
 .btn-sec {
   padding: 16px 12px;
-  background-color: $sec-btn;
+  background-color: $default;
   color: $pri-btn;
 }
