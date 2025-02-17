@@ -1,5 +1,12 @@
 <ul class="nav__list">
   <each loop="item in {{list}}">
-    <li><a href="javascript:void(0)" class="link">{{item}}</a></li>
+    <li>
+      <a href="javascript:void(0)" class="link">
+        {{item}}
+        <if condition="item === 'Sixteen'">
+          <img src="../assets/icons/arrow-down.svg" alt="arrow-down" />
+        </if>
+      </a>
+    </li>
   </each>
 </ul>
