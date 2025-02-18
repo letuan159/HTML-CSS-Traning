@@ -113,7 +113,7 @@
       &__text {
         @include flex($direction: column, $align: center, $gap: 24px);
 
-        .title {
+        .tittle {
           font-weight: bold;
           font-size: pxToRem(32);
           line-height: 110%;
@@ -129,6 +129,11 @@
 
       &__buttons {
         @include flex($direction: row, $gap: 16px);
+
+        .btn {
+          padding: 8px 12px;
+          font-size: pxToRem(14);
+        }
       }
     }
 
