@@ -112,6 +112,19 @@
 
       &__text {
         @include flex($direction: column, $align: center, $gap: 24px);
+
+        .title {
+          font-weight: bold;
+          font-size: pxToRem(32);
+          line-height: 110%;
+          text-align: center;
+        }
+
+        .description {
+          font-size: pxToRem(18);
+          line-height: 140%;
+          text-align: center;
+        }
       }
 
       &__buttons {
