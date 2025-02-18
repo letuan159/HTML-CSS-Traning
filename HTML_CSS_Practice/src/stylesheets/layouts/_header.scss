@@ -107,6 +107,18 @@
     background-color: $bg-bot;
     padding: 48px 16px;
 
+    .hero-content {
+      @include flex($direction: column, $align: center, $gap: 48px);
+
+      &__text {
+        @include flex($direction: column, $align: center, $gap: 24px);
+      }
+
+      &__buttons {
+        @include flex($direction: row, $gap: 16px);
+      }
+    }
+
     .hero-image {
       img {
         width: 100%;
