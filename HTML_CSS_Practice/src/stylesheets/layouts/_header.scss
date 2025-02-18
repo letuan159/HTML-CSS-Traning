@@ -44,6 +44,7 @@
           }
           &-pri {
             width: 132px;
+            margin-right: 80px;
           }
         }
       }
@@ -94,6 +95,7 @@
             }
             &-pri {
               width: 169px;
+              margin-right: 0px;
             }
           }
         }
@@ -140,6 +142,15 @@
     .hero-image {
       img {
         width: 100%;
+      }
+    }
+
+    @include tablet {
+      padding: 80px 80px;
+      .hero-content {
+        .tittle {
+          font-size: pxToRem(43);
+        }
       }
     }
   }

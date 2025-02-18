@@ -8,8 +8,8 @@
   letter-spacing: 0.5;
   border: 2px $pri-btn solid;
   cursor: pointer;
-  width: 172.5px;
-  height: 40px;
+  width: pxToRem(172.5);
+  height: pxToRem(40);
 }
 
 .btn {

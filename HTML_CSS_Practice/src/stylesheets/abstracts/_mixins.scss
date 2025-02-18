@@ -21,7 +21,8 @@
   $align: false,
   $justify: false,
   $wrap: false,
-  $gap: false
+  $gap: false,
+  $flex: false
 ) {
   display: $display;
   @if $direction {
@@ -38,5 +39,8 @@
   }
   @if $gap {
     gap: $gap;
+  }
+  @if $flex {
+    flex: $flex;
   }
 }
