@@ -4,9 +4,28 @@
     <!-- Mobile Navbar -->
     <nav class="nav-mobile">
       <a href="javascript:void(0)" class="nav-mobile__logo">
-        <img src="../assets/icons/logo.svg" alt="WebbyFrames Logo" />
-        <span>WebbyFrames</span>
+        <picture>
+          <source
+            srcset="../assets/icons/logo-desktop.svg"
+            media="(min-width: 1200px)"
+          />
+          <img src="../assets/icons/logo-mobile.svg" alt="WebbyFrames Logo" />
+        </picture>
       </a>
+
+      <include
+        src="./components/list.html"
+        locals='{
+          "list" : "[`Eleven`, `Twelve`, `Thirteen`, `Sixteen`]"
+        }'
+      >
+      </include>
+
+      <div class="nav-buttons tablet desktop">
+        <button class="btn-login">Log In</button>
+        <button class="btn-free_trial">Start free trial</button>
+      </div>
+
       <img
         src="../assets/icons/plus.svg"
         alt="Button group"
