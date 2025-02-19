@@ -7,7 +7,6 @@
   // Navbar mobile
   &__top {
     padding: 16px;
-    height: 80px;
     border-bottom: $border-bot 1px solid;
 
     .nav {
@@ -30,6 +29,9 @@
 
     // Navbar tablet
     @include tablet {
+      .nav {
+        @include flex($justify: space-evenly);
+      }
       .nav__buttons-tablet {
         @include flex($align: center, $justify: center, $gap: 16px);
         width: 437.5px;
@@ -52,9 +54,9 @@
 
     //Navbar Desktop
     @include desktop {
-      gap: 24px;
       padding: 16px 80px;
       .nav {
+        @include flex($justify: space-between);
         &__mobile,
         &__plus {
           display: none;
@@ -150,6 +152,48 @@
       .hero-content {
         .tittle {
           font-size: pxToRem(43);
+        }
+      }
+    }
+
+    @include desktop {
+      @include flex($direction: row, $justify: space-between, $gap: 80px);
+
+      .hero-content,
+      .hero-image {
+        flex: 1;
+      }
+
+      .hero-content {
+        @include flex($align: flex-start, $gap: 64px);
+        padding: 32px 0px;
+        &__text {
+          @include flex($gap: 48px);
+
+          .tittle {
+            font-size: pxToRem(54);
+            text-align: left;
+          }
+
+          .description {
+            text-align: left;
+          }
+        }
+
+        .btn {
+          padding: 0;
+          width: 228px;
+          height: 56px;
+          font-size: 20px;
+          &__pri {
+            padding: 0px 16px;
+          }
+          &__text {
+            padding: 0px 16px;
+          }
+          &__icon {
+            padding: 5px;
+          }
         }
       }
     }
