@@ -2,15 +2,20 @@
   <!-- Start of header top -->
   <div class="header-main__top">
     <!-- Mobile Navbar -->
-    <nav class="nav-mobile">
-      <a href="javascript:void(0)" class="nav-mobile__logo">
-        <picture>
-          <source
-            srcset="../assets/icons/logo-desktop.svg"
-            media="(min-width: 1200px)"
-          />
-          <img src="../assets/icons/logo-mobile.svg" alt="WebbyFrames Logo" />
-        </picture>
+    <nav class="nav">
+      <a href="javascript:void(0)" class="nav__logo">
+        <figure>
+          <picture>
+            <source
+              srcset="../assets/images/desktop/logo.svg"
+              media="(min-width: 1200px)"
+            />
+            <img
+              src="../assets/images/mobile/logo.svg"
+              alt="WebbyFrames Logo"
+            />
+          </picture>
+        </figure>
       </a>
 
       <include
@@ -20,17 +25,53 @@
         }'
       >
       </include>
-
-      <div class="nav-buttons tablet desktop">
-        <button class="btn-login">Log In</button>
-        <button class="btn-free_trial">Start free trial</button>
+      <div class="nav__buttons">
+        <button class="btn btn-sec">Log In</button>
+        <button class="btn btn-pri">Start Free Trial</button>
       </div>
 
-      <img
-        src="../assets/icons/plus.svg"
-        alt="Button group"
-        class="nav-mobile__plus"
-      />
+      <figure class="nav__plus">
+        <img src="../assets/icons/plus.svg" alt="Button group" />
+      </figure>
     </nav>
+  </div>
+
+  <div class="header-main__bottom">
+    <section class="hero-content">
+      <article class="hero-content__text">
+        <h1 class="tittle">Host Design Meetings From Anywhere</h1>
+
+        <p class="description">
+          Unlock your design skills to create beautiful websites and apps with a
+          poweful and easy-to-use tool.
+        </p>
+      </article>
+
+      <div class="hero-content__buttons">
+        <button class="btn btn-pri">
+          <figure>
+            <figcaption class="btn__text">Primary Action</figcaption>
+            <img
+              src="../assets/icons/arrown-right.svg"
+              alt="Primary Action"
+              class="btn__icon"
+            />
+          </figure>
+        </button>
+        <button class="btn btn-sec">Secondary Action</button>
+      </div>
+    </section>
+
+    <section class="hero-image">
+      <figure>
+        <picture>
+          <source
+            srcset="../assets/images/desktop/hero-image.svg"
+            media="(min-width: 600px)"
+          />
+          <img src="../assets/images/mobile/hero-image.svg" alt="Hero image" />
+        </picture>
+      </figure>
+    </section>
   </div>
 </header>
