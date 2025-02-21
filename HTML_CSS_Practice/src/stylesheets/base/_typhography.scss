@@ -7,8 +7,10 @@
 
 body {
   font-family: $primary-font;
-
-  // color: $text-color;
+  color: $pri-text;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 140%;
   // background-color: $background-color;
 
   // @include tablet {
