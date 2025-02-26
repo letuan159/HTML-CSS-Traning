@@ -1,0 +1,10 @@
+<div class="tools">
+  <each loop="item in {{icons}}">
+    <figure class="tools__item">
+      <img src="{{item.src}}" alt="{{item.alt}}" class="tools__image" />
+      <figurecaption>
+        <span class="tools__description"> {{item.text}} </span>
+      </figurecaption>
+    </figure>
+  </each>
+</div>
