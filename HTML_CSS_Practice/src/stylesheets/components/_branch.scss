@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+
+.branch {
+  @include flex($direction: row, $gap: 24px, $wrap: wrap, $justify: center);
+  @include tablet {
+    @include flex($gap: 24px);
+  }
+  @include desktop {
+    gap: 16px;
+  }
+
+  &__item {
+    text-align: center;
+    @include desktop {
+      flex: 1;
+    }
+  }
+}
