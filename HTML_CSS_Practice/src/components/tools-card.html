@@ -1,6 +1,23 @@
+<<<<<<< Updated upstream
 <each loop="item in {{icons}}">
   <figure>
     <img src="{{item.src}}" alt="{{item.alt}}" />
     <figurecaption>{{item.text}}</figurecaption>
   </figure>
 </each>
+=======
+<div class="tools">
+  <each loop="item in {{icons}}">
+    <figure class="tools__item">
+      <img
+        src="../assets/icons/{{item.src}}"
+        alt="{{item.alt}}"
+        class="tools__image"
+      />
+      <figurecaption>
+        <span class="tools__description"> {{item.text}} </span>
+      </figurecaption>
+    </figure>
+  </each>
+</div>
+>>>>>>> Stashed changes
