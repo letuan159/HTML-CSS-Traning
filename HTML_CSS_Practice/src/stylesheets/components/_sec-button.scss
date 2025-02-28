@@ -7,6 +7,7 @@
   cursor: pointer;
   border-radius: 0px;
 
+  @include flex($align: center, $justify: center);
   .btn-text {
     font-family: Roboto;
     font-weight: $medium;
@@ -14,6 +15,9 @@
     padding: 0px 16px;
     color: $pri-btn;
     letter-spacing: 0.5px;
+    text-align: center;
+    white-space: nowrap;
+
     transition: color 0.3s ease;
   }
 
