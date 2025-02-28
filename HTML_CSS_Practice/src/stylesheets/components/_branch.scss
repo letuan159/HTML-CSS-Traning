@@ -5,6 +5,11 @@
   @include tablet {
     @include flex($gap: 24px);
   }
+
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+
   @include desktop {
     gap: 16px;
   }
@@ -13,6 +18,10 @@
     text-align: center;
     @include desktop {
       flex: 1;
+    }
+
+    .image {
+      width: 100%;
     }
   }
 }
