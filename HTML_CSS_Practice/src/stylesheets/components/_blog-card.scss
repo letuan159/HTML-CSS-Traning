@@ -14,8 +14,7 @@
   }
 
   @include desktop {
-    flex-wrap: nowrap;
-    gap: 16px;
+    @include flex($wrap: nowrap, $gap: 16px);
   }
 
   &__image {
