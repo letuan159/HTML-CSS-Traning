@@ -15,11 +15,6 @@
   }
 
   &__item {
-    text-align: center;
-    @include desktop {
-      flex: 1;
-    }
-
     .image {
       width: 100%;
     }
