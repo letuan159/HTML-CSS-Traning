@@ -1,0 +1,37 @@
+<div class="blog-card">
+  <each loop="index in {{ Array(4).fill() }}">
+    <div class="blog-card__box">
+      <figure>
+        <picture>
+          <source
+            srcset="../assets/images/desktop/box.svg"
+            media="(min-width: 1200px)"
+            class="blog-card__image"
+          />
+          <img
+            src="../assets/images/mobile/box.svg"
+            alt="No image"
+            class="blog-card__image"
+          />
+        </picture>
+      </figure>
+
+      <div class="blog-card__text">
+        <div class="category-box">
+          <p class="category">Category</p>
+          <h3 class="title">Article Title</h3>
+        </div>
+
+        <p>Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.</p>
+
+        <figure class="user">
+          <img src="../assets/icons/user.svg" alt="Avatar" />
+          <figcaption class="user__info">
+            <span class="user__name">Jane Doe</span>
+            <span class="user__role">Senior Designer</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </each>
+</div>
