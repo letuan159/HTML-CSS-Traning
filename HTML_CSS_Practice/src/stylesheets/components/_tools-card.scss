@@ -1,0 +1,36 @@
+@use "../abstracts/" as *;
+
+.tools {
+  @include flex($direction: column, $gap: 16px);
+  @include tablet {
+    @include flex($direction: row, $wrap: wrap, $justify: center);
+  }
+  @include desktop {
+    @include flex($justify: center, $wrap: nowrap);
+  }
+
+  &__item {
+    @include flex(
+      $direction: column,
+      $gap: 16px,
+      $align: center,
+      $justify: center
+    );
+    @include tablet {
+      flex: 0 1 45%;
+    }
+
+    padding: 0 16px;
+
+    text-align: center;
+  }
+
+  &__description {
+    @include tablet {
+      font-size: 17px;
+    }
+    @include desktop {
+      font-size: pxToRem(18);
+    }
+  }
+}

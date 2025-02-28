@@ -25,9 +25,23 @@
         }'
       >
       </include>
+
       <div class="nav__buttons">
-        <button class="btn btn-sec">Log In</button>
-        <button class="btn btn-pri">Start Free Trial</button>
+        <include
+          src="./components/sec-button.html"
+          locals='{
+            "btnText" : "Log In"
+          }'
+        >
+        </include>
+
+        <include
+          src="./components/pri-button.html"
+          locals='{
+            "btnText" : "Start Free Trial"
+          }'
+        >
+        </include>
       </div>
 
       <figure class="nav__plus">
@@ -48,17 +62,25 @@
       </article>
 
       <div class="hero-content__buttons">
-        <button class="btn btn-pri">
+        <button class="pri-btn">
           <figure>
-            <figcaption class="btn__text">Primary Action</figcaption>
+            <figcaption>
+              <span class="btn-text">Primary Action</span>
+            </figcaption>
             <img
               src="../assets/icons/arrown-right.svg"
               alt="Primary Action"
-              class="btn__icon"
+              class="pri-btn__icon"
             />
           </figure>
         </button>
-        <button class="btn btn-sec">Secondary Action</button>
+        <include
+          src="./components/sec-button.html"
+          locals='{
+            "btnText" : "Secondary Action"
+          }'
+        >
+        </include>
       </div>
     </section>
 
