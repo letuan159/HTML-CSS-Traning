@@ -1,0 +1,37 @@
+@use "../abstracts/" as *;
+
+.pri-btn {
+  padding: 16px;
+  background-color: $pri-btn;
+  border: 2px $pri-btn solid;
+  cursor: pointer;
+  border-radius: 0px;
+
+  .btn-text {
+    font-family: Roboto;
+    font-weight: $medium;
+    font-size: pxToRem(20);
+    padding: 0px 16px;
+    color: $default;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
+  @include desktop {
+    &:hover {
+      background-color: darken($pri-btn, 10%);
+      .btn-text {
+        color: lighten($default, 20%);
+      }
+    }
+  }
+
+  &:active {
+    background-color: $default;
+    .btn-text {
+      color: $pri-btn;
+    }
+  }
+}

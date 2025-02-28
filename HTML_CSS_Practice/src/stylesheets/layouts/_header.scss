@@ -3,67 +3,229 @@
 .header-main {
   width: 100%;
   @include flex($direction: column);
-  .tablet,
-  .desktop {
-    display: none;
-  }
-  // Navbar mobile
+
+  // Navbar
   &__top {
     padding: 16px;
-    height: 80px;
-    .nav-mobile {
+    @include desktop {
+      padding: 16px 80px;
+    }
+
+    border-bottom: $border-bot 1px solid;
+
+    //style for navbar
+    .nav {
       @include flex($align: center, $justify: space-between);
+
+      @include tablet {
+        @include flex($justify: space-evenly);
+      }
+
+      @include desktop {
+        @include flex($justify: space-between);
+      }
+
+      //Style for button
+      &__buttons {
+        display: none;
+
+        @include tablet {
+          @include flex($align: center, $justify: center, $gap: 16px);
+          width: 437.5px;
+          height: 48px;
+        }
+
+        @include desktop {
+          @include flex($align: center, $justify: flex-end, $gap: 16px);
+        }
+
+        .pri-btn {
+          padding: 16px 12px;
+          .btn-text {
+            font-size: pxToRem(16);
+          }
+
+          @include tablet {
+            margin-right: 80px;
+          }
+
+          @include desktop {
+            margin-right: 0;
+          }
+        }
+      }
+
+      //style for list
+      &__list {
+        display: none;
+
+        @include desktop {
+          @include flex($align: center, $justify: center, $gap: 16px);
+
+          width: 357px;
+          height: 48px;
+        }
+
+        //style for a tag of desktop
+        .link {
+          @include flex($align: center, $justify: center, $gap: 8px);
+
+          padding: 12px 8px;
+          font-size: pxToRem(16);
+          font-weight: $medium;
+          color: $pri-text;
+
+          &__icon {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      //style for logo
       &__logo {
         height: 24px;
         width: pxToRem(143);
-        @include flex($align: center, $gap: pxToRem(4));
+        @include flex($align: center, $gap: 4px);
         picture {
           height: 24px;
         }
-      }
-    }
 
-    // Navbar tablet
-    @include tablet {
-      .tablet {
-        @include flex($align: center, $justify: center, $gap: 16px);
-        width: 437.5px;
-        height: 48px;
-
-        //Button login & Free Trial
-        .btn {
-          &-login,
-          &-free_trial {
-            font-family: inherit;
-            height: 30px;
-            border-radius: 0px;
-            padding: 2px 15px;
-            font-size: 14px;
-            font-weight: $medium;
-            letter-spacing: 0.5px;
-            line-height: 100%;
-            border: 2px #0f62fe solid;
-          }
-
-          &-login {
-            background-color: white;
-            color: #0f62fe;
-          }
-
-          &-free_trial {
-            background-color: #0f62fe;
-            color: #ffffff;
-          }
+        @include desktop {
+          width: 437.5px;
         }
       }
-    }
 
-    //Navbar Desktop
-    @include desktop {
-      .nav-mobile {
-        &__plus {
+      //style for button group
+      &__plus {
+        @include desktop {
           display: none;
         }
+      }
+    }
+  }
+
+  //Start style for bottom header
+  &__bottom {
+    @include flex($align: center, $direction: column, $gap: 32px);
+
+    @include desktop {
+      @include flex($direction: row, $justify: space-between, $gap: 80px);
+    }
+
+    background-color: $bg-bot;
+
+    padding: 48px 16px;
+
+    @include tablet {
+      padding: 80px 80px;
+    }
+
+    .hero-content {
+      @include flex($direction: column, $align: center, $gap: 48px);
+      @include desktop {
+        @include flex($align: flex-start, $gap: 64px);
+        flex: 1;
+        padding: 32px 0px;
+      }
+
+      &__text {
+        @include flex($direction: column, $align: center, $gap: 24px);
+        @include desktop {
+          gap: 48px;
+        }
+
+        .tittle {
+          font-weight: bold;
+          font-size: pxToRem(32);
+          line-height: 110%;
+          text-align: center;
+
+          @include tablet {
+            font-size: pxToRem(43);
+          }
+
+          @include desktop {
+            font-size: pxToRem(54);
+            text-align: left;
+          }
+        }
+
+        .description {
+          font-size: pxToRem(18);
+          line-height: 140%;
+          text-align: center;
+
+          @include desktop {
+            text-align: left;
+          }
+        }
+      }
+
+      &__buttons {
+        @include flex($direction: row, $gap: 16px);
+
+        .pri-btn {
+          &__icon {
+            display: none;
+            @include desktop {
+              display: inline;
+            }
+          }
+
+          .btn-text {
+            font-size: pxToRem(14);
+            @include tablet {
+              font-size: pxToRem(18);
+            }
+            @include desktop {
+              font-size: pxToRem(20);
+            }
+          }
+
+          @include desktop {
+            figure {
+              @include flex($wrap: nowrap);
+            }
+          }
+        }
+
+        .sec-btn {
+          .btn-text {
+            font-size: pxToRem(14);
+            @include tablet {
+              font-size: pxToRem(18);
+            }
+            @include desktop {
+              font-size: pxToRem(20);
+            }
+          }
+        }
+
+        .sec-btn,
+        .pri-btn {
+          padding: 8px 12px;
+
+          @include tablet {
+            padding: 16px;
+          }
+
+          flex: 1;
+
+          min-width: 0;
+
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .hero-image {
+      @include desktop {
+        flex: 1;
+      }
+
+      img {
+        width: 100%;
       }
     }
   }
