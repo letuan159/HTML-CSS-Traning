@@ -1,30 +1,24 @@
-<section class="tools-page">
-  <include
-    src="./components/tittle-page.html"
-    locals='{
-        "captionText" : "The tools you need",
-        "tittle" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      }'
-  >
-  </include>
+<section class="tools">
+  <div class="tools__header">
+    <h2>The tools you need</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
 
-  <include
-    src="./components/tools-card.html"
-    locals='{
+  <div class="tools__icon">
+    <include
+      src="./components/tools-card.html"
+      locals='{
         "icons": [
-          { "src": "../assets/icons/calendar.svg", "alt": "Calendar icon", "text": "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse." },
-          { "src": "../assets/icons/luggage.svg", "alt": "Luggage icon", "text": "Id eros pellentesque facilisi id mollis faucibus commodo enim." },
-          { "src": "../assets/icons/pulse.svg", "alt": "Pulse icon", "text": "Nunc, pellentesque velit malesuada non massa arcu." },
-          { "src": "../assets/icons/car.svg", "alt": "Car icon", "text": "Imperdiet purus pellentesque sit mi nibh sit integer faucibus." }
+          { "src": "calendar.svg", "alt": "Calendar icon", "text": "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse." },
+          { "src": "luggage.svg", "alt": "Luggage icon", "text": "Id eros pellentesque facilisi id mollis faucibus commodo enim." },
+          { "src": "pulse.svg", "alt": "Pulse icon", "text": "Nunc, pellentesque velit malesuada non massa arcu." },
+          { "src": "car.svg", "alt": "Car icon", "text": "Imperdiet purus pellentesque sit mi nibh sit integer faucibus." }
         ]
       }'
-  ></include>
+    ></include>
+  </div>
 
-  <include
-    src="./components/pri-button.html"
-    locals='{
-      "btnText" : "Primary Action"
-    }'
-  >
-  </include>
+  <div class="tools_button">
+    <button>Primary Action</button>
+  </div>
 </section>
