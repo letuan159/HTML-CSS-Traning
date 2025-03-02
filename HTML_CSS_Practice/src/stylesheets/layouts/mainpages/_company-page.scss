@@ -1,0 +1,30 @@
+@use "../../abstracts/" as *;
+
+.company-page {
+  background-color: $bg-bot;
+  &__top {
+    display: none;
+    @include desktop {
+      @include flex($direction: column, $gap: 48px);
+    }
+    padding: 80px 80px 0;
+
+    .page-header {
+      @include desktop {
+        @include flex($direction: column);
+      }
+    }
+
+    .text {
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+
+  &__bottom {
+    padding: 48px 16px;
+    @include desktop {
+      padding: 80px 80px;
+    }
+  }
+}
