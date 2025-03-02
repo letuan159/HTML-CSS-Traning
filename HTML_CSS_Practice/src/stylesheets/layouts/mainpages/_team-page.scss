@@ -1,0 +1,22 @@
+@use "../../abstracts/" as *;
+
+.team-page {
+  @include flex($direction: column, $gap: 32px, $align: center);
+  padding: 48px 16px;
+  background-color: $bg-bot;
+
+  @include desktop {
+    gap: 64px;
+    padding: 80px;
+  }
+
+  .team-card-container {
+    @include flex($direction: column, $gap: 48px, $align: center);
+    @include desktop {
+      @include flex($direction: row, $gap: 16px, $justify: center, $wrap: wrap);
+    }
+  }
+  .branch {
+    @include flex($direction: row, $gap: 16px, $wrap: nowrap, $justify: center);
+  }
+}

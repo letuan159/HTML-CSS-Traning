@@ -1,0 +1,34 @@
+<section class="team-page">
+  <include
+    src="./components/tittle-page.html"
+    locals='{
+    "captionText" : "The Team",
+    "tittle" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nBibendum amet at molestie mattis."
+  }'
+  >
+  </include>
+
+  <div class="team-card-container">
+    <include
+      src="./components/team-card.html"
+      locals='{
+        "list" : [
+          {"firstName": "Darrell", "lastName" : "Steward", "role" : "UI Designer & Co-founder"},
+          {"firstName": "Savannah", "lastName" : "Nguyen", "role" : "UX Designer & Co-founder"}
+        ]
+    }'
+    >
+    </include>
+
+    <include
+      src="./components/team-card.html"
+      locals='{
+        "list" : [
+          {"firstName": "Dianne", "lastName" : "Russell", "role" : "Developer"},
+          {"firstName": "Kristin", "lastName" : "Watson", "role" : "Sr. Product Designer"}
+        ]
+    }'
+    >
+    </include>
+  </div>
+</section>
