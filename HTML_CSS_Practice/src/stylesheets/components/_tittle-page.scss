@@ -1,7 +1,12 @@
 @use "../abstracts/" as *;
 
 .page-header {
-  @include flex($direction: column, $gap: 8px, $align: center);
+  @include flex(
+    $direction: column,
+    $gap: 8px,
+    $align: center,
+    $justify: center
+  );
 
   &__caption {
     color: $cap-text;
@@ -10,12 +15,14 @@
   }
 
   &__tittle {
+    white-space: pre-line;
+
     font-size: pxToRem(24);
     @include tablet {
-      font-size: pxToRem(32);
+      font-size: pxToRem(33);
     }
     @include desktop {
-      font-size: pxToRem(40);
+      font-size: pxToRem(42);
     }
 
     line-height: 110%;
