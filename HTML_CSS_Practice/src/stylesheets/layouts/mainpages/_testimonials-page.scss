@@ -1,0 +1,19 @@
+@use "../../abstracts/" as *;
+
+.testimonials-page {
+  background-color: $bg-bot;
+
+  &__top {
+    padding: 48px 16px;
+    @include desktop {
+      padding: 80px 80px 0;
+    }
+  }
+
+  &__bottom {
+    padding: 48px 16px;
+    @include desktop {
+      padding: 80px;
+    }
+  }
+}

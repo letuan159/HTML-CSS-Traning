@@ -1,0 +1,67 @@
+@use "../abstracts/" as *;
+
+.author-card-box {
+  @include flex($direction: row, $justify: center, $gap: 8px);
+
+  .arrow {
+    @include flex($align: center);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.5); /* tăng kích thước lên 1.5 lần */
+      cursor: pointer;
+    }
+  }
+
+  @include desktop {
+    gap: 16px;
+  }
+
+  .author-card {
+    &:nth-of-type(2) {
+      display: none;
+      @include tablet {
+        @include flex();
+      }
+    }
+
+    @include flex(
+      $direction: column,
+      $justify: center,
+      $align: center,
+      $gap: 16px,
+      $flex: 1
+    );
+
+    border: 1px $border-bot solid;
+
+    background-color: $default;
+
+    padding: 24px;
+
+    &__text {
+      font-size: pxToRem(18);
+      text-align: center;
+    }
+
+    &__user {
+      @include flex(
+        $direction: column,
+        $align: center,
+        $justify: center,
+        $gap: 16px
+      );
+
+      padding-top: 16px;
+    }
+
+    &__info {
+      @include flex($direction: column, $align: center, $justify: center);
+
+      .author-name {
+        font-size: pxToRem(24);
+        font-weight: bold;
+      }
+    }
+  }
+}
