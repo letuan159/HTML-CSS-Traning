@@ -1,7 +1,25 @@
 @use "../abstracts/" as *;
 
 .page-header {
+<<<<<<< Updated upstream
   @include flex($direction: column, $gap: 8px, $align: center);
+=======
+  @include flex(
+    $direction: column,
+    $gap: 24px,
+    $align: center,
+    $justify: center
+  );
+>>>>>>> Stashed changes
+
+  div {
+    @include flex(
+      $direction: column,
+      $gap: 8px,
+      $align: center,
+      $justify: center
+    );
+  }
 
   &__caption {
     color: $cap-text;
@@ -25,5 +43,10 @@
   &__tittle {
     text-align: center;
     font-weight: bold;
+  }
+
+  &__description {
+    line-height: 140%;
+    text-align: center;
   }
 }

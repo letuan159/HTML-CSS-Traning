@@ -1,0 +1,46 @@
+@use "../abstracts/" as *;
+
+.team-card {
+  @include flex(
+    $direction: row,
+    $gap: 16px,
+    $justify: center,
+    $align: center,
+    $wrap: wrap
+  );
+
+  @include tablet {
+    gap: 80px;
+  }
+
+  @include desktop {
+    gap: 16px;
+  }
+
+  .card {
+    @include flex($direction: column, $gap: 16px, $align: center, $flex: 1 1 0);
+
+    .name-role {
+      @include flex($direction: column, $align: center);
+      .name {
+        font-size: pxToRem(18);
+        line-height: 140%;
+      }
+
+      .role {
+        font-size: pxToRem(12);
+        color: $sec-text;
+        line-height: 140%;
+      }
+    }
+
+    .sec-btn {
+      width: 172.5px;
+      height: 48px;
+
+      @include desktop {
+        width: 180px;
+      }
+    }
+  }
+}
