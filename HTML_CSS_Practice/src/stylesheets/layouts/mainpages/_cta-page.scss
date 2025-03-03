@@ -1,0 +1,37 @@
+@use "../../abstracts/" as *;
+
+.cta-page {
+  padding: 48px 16px;
+
+  @include flex($direction: column, $gap: 32px, $align: center);
+
+  @include desktop {
+    gap: 64px;
+    padding: 80px;
+  }
+
+  .cta-buttons {
+    @include flex(
+      $direction: row,
+      $gap: 16px,
+      $justify: center,
+      $align: center
+    );
+
+    .pri-btn,
+    .sec-btn {
+      padding: 8px 12px;
+
+      @include desktop {
+        padding: 16px;
+      }
+
+      .btn-text {
+        font-size: pxToRem(14);
+        @include desktop {
+          font-size: pxToRem(20);
+        }
+      }
+    }
+  }
+}
