@@ -12,7 +12,7 @@
   );
 >>>>>>> Stashed changes
 
-  div {
+  .tittle-box {
     @include flex(
       $direction: column,
       $gap: 8px,
@@ -48,5 +48,8 @@
   &__description {
     line-height: 140%;
     text-align: center;
+    @include desktop {
+      font-size: pxToRem(18);
+    }
   }
 }
