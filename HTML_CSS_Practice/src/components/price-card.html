@@ -1,0 +1,50 @@
+<div class="price-box">
+  <each loop="item in {{list}}">
+    <div class="price-card">
+      <if condition="item.plan === 'Professional'">
+        <include
+          src="./components/badge.html"
+          locals='{ 
+          "badge" : "Most Popular"
+         }'
+        ></include>
+      </if>
+
+      <include
+        src="./components/price-tittle.html"
+        locals='{
+        "plan" : "{{item.plan}}",
+        "sub" : "{{item.sub}}"
+      }'
+      >
+      </include>
+
+      <include
+        src="./components/price.html"
+        locals='{
+      "discount" : "${{item.discount}}",
+      "price" : "${{item.price}}",
+      "description": " ${{item.price}} USD per month, paid annually"
+    }'
+      >
+      </include>
+
+      <include
+        src="./components/pri-button.html"
+        locals='{
+      "btnText" : "Get Started"
+    }'
+      >
+      </include>
+
+      <include
+        src="./components/feature-list.html"
+        locals='{
+      "type": "{{item.plan}}",
+      "list": ["Feature Eleven", "Feature Twelve", "Feature Thirteen", "Feature Fourteen", "Feature Fifteen", "Feature Sixteen", "Feature Seventeen", "Feature Eighteen", "Feature Nineteen", "Feature Twenty", "Feature Thirty", "Feature Forty"]
+    }'
+      >
+      </include>
+    </div>
+  </each>
+</div>

@@ -1,0 +1,46 @@
+<section class="price-page">
+  <include
+    src="./components/tittle-page.html"
+    locals='{
+      "captionText" : "Pricing",
+      "tittle" : "Bibendum amet at molestie mattis.",
+      "description" : "Rhoncus morbi et augue nec, in id ullamcorper at sit. Condimentum sit nunc in eros scelerisque sed. Commodo in viverra nunc, ullamcorper ut. Non, amet, aliquet scelerisque nullam sagittis, pulvinar. Fermentum scelerisque sit consectetur hac mi. Mollis leo eleifend ultricies purus iaculis."
+    }'
+  >
+  </include>
+
+  <div class="price-page__time-switch">
+    <include
+      src="./components/badge.html"
+      locals='{ 
+        "badge" : "20% OFF"
+       }'
+    ></include>
+    <span class="time-option">Yearly</span>
+
+    <label class="time-select">
+      <input type="checkbox" class="toggle-checkbox" />
+      <figure>
+        <img
+          src="../assets/icons/ellipse.svg"
+          alt="ellipse icon"
+          class="selected-icon"
+        />
+      </figure>
+    </label>
+
+    <span class="time-option">Monthly</span>
+  </div>
+
+  <include
+    src="./components/price-card.html"
+    locals='{
+    "list": [
+      { "plan": "Freelancer", "sub": "Quisque donec nibh diam tellus integer eros.", "discount": "35", "price": "25"},
+      { "plan": "Professional", "sub": "Sed eget purus vulputate suscipit erat.", "discount": "65", "price": "55"},
+      { "plan": "Agency", "sub": "Odio aenean purus non cursus blandit.", "discount": "35", "price": "25"}
+
+    ]
+  }'
+  ></include>
+</section>
