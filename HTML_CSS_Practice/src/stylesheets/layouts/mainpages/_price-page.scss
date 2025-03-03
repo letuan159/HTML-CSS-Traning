@@ -1,0 +1,70 @@
+@use "../../abstracts/" as *;
+
+.price-page {
+  @include flex(
+    $direction: column,
+    $gap: 32px,
+    $justify: center,
+    $align: center
+  );
+  padding: 48px 16px;
+
+  @include desktop {
+    gap: 48px;
+    padding: 80px;
+  }
+
+  &__time-switch {
+    position: relative;
+
+    @include flex(
+      $direction: row,
+      $gap: 16px,
+      $align: center,
+      $justify: center
+    );
+
+    .time-option {
+      font-size: pxToRem(18);
+      line-height: 140%;
+    }
+
+    .time-select {
+      background-color: $pri-btn;
+      padding: 2px;
+      width: 32px;
+      height: 16px;
+      border-radius: 33px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:focus-visible {
+        outline: 2px solid $pri-btn;
+        outline-offset: 2px;
+      }
+    }
+
+    .toggle-checkbox {
+      display: none;
+    }
+
+    .selected-icon {
+      width: 12px;
+      height: 12px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .toggle-checkbox:checked ~ figure .selected-icon {
+      transform: translateX(16px);
+    }
+
+    .badge {
+      left: -9px;
+      top: -20px;
+      padding: 1px 10px 2px;
+      font-size: pxToRem(12);
+      border-radius: 10px;
+    }
+  }
+}
