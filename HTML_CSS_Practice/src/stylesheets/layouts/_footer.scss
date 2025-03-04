@@ -1,0 +1,143 @@
+@use "../abstracts/" as *;
+
+.footer-main {
+  @include flex($direction: column, $gap: 32px);
+
+  padding: 48px 16px;
+  background-color: $sec-text;
+
+  @include tablet {
+    padding: 48px 40px;
+  }
+  @include desktop {
+    gap: 48px;
+    padding: 48px 80px;
+  }
+  hr {
+    width: 100%;
+  }
+
+  &__top {
+    @include flex($direction: row, $wrap: wrap, $align: center, $gap: 48px);
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    .search-box {
+      @include flex(
+        $direction: row,
+        $gap: 8px,
+        $justify: center,
+        $align: center
+      );
+
+      .search-input {
+        width: 100%;
+        max-width: 221px;
+        padding: 12px 37px 12px 48px;
+        height: 48px;
+        font-size: pxToRem(16);
+
+        line-height: 140%;
+        outline: none;
+        text-overflow: ellipsis;
+
+        border: none;
+        background: url("../assets/icons/search.svg") no-repeat 16px center;
+        background-color: $default;
+
+        @include desktop {
+          max-width: 349px;
+          width: 349px;
+          padding: 12px 16px 12px 48px;
+          text-overflow: unset;
+        }
+      }
+
+      .pri-btn {
+        height: 48px;
+        padding: 12px 12px;
+        .btn-text {
+          font-size: pxToRem(16);
+        }
+      }
+    }
+  }
+
+  &__mid {
+    @include flex($direction: column, $gap: 48px, $justify: center);
+    @include tablet {
+      @include flex($direction: row, $wrap: wrap, $justify: space-between);
+    }
+
+    .footer-list {
+      @include flex($direction: column, $gap: 16px, $justify: center);
+
+      &:last-child {
+        gap: 24px;
+      }
+
+      .column {
+        &__index,
+        &__item {
+          color: $default;
+          list-style-type: none;
+        }
+
+        &__index {
+          padding: 12px 0;
+          font-size: pxToRem(18);
+          font-weight: bold;
+        }
+
+        &__item {
+          font-weight: $medium;
+        }
+      }
+
+      .get-app-box {
+        @include flex($direction: column, $gap: 16px);
+        .get-app {
+          @include flex($direction: row, $gap: 8px);
+        }
+      }
+
+      .join-us-box {
+        @include flex($direction: column, $gap: 8px);
+
+        .branch {
+          @include flex($justify: flex-start, $gap: 16px);
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    @include flex(
+      $direction: row,
+      $gap: 24px,
+      $justify: space-between,
+      $wrap: wrap
+    );
+    .copyright {
+      font-size: pxToRem(12);
+      line-height: 140%;
+      color: $default;
+
+      @include desktop {
+        font-size: pxToRem(14);
+      }
+    }
+
+    .nav__list {
+      @include flex($direction: row, $gap: 8px);
+      .link {
+        padding: 12px 8px 12px 0;
+        font-size: pxToRem(16);
+        font-weight: $medium;
+        color: $default;
+        cursor: default;
+      }
+    }
+  }
+}

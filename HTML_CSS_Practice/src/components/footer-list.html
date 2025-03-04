@@ -1,0 +1,43 @@
+<each loop="column in {{columns}}">
+  <ul class="footer-list">
+    <!-- Column 1 - 3 -->
+    <if condition="column.index !== 'Column Four'">
+      <li class="column__index">{{column.index}}</li>
+
+      <each loop="item in {{column.list}}">
+        <li class="column__item">{{item}}</li>
+      </each>
+    </if>
+
+    <!-- Column 4 -->
+    <if condition="column.index === 'Column Four'">
+      <div class="get-app-box">
+        <li class="column__index">{{column.index}}</li>
+
+        <figure class="get-app">
+          <img src="../assets/icons/app-store.svg" alt="" />
+
+          <img src="../assets/icons/google-play.svg" alt="" />
+        </figure>
+      </div>
+
+      <div class="join-us-box">
+        <li class="column__index">Join Us</li>
+
+        <include
+          src="./components/branch.html"
+          locals='{
+              "icons": [
+                { "src": "youtube.svg", "alt": "Youtube icon" },
+                { "src": "facebook.svg", "alt": "Facebook icon" },
+                { "src": "twitter.svg", "alt": "Twitter icon"},
+                { "src": "instagram.svg", "alt": "Instagram icon" },
+                { "src": "linkedin.svg", "alt": "Linkedin icon" }
+              ]
+            }'
+        >
+        </include>
+      </div>
+    </if>
+  </ul>
+</each>
