@@ -8,7 +8,7 @@
   }
 
   .price-card {
-    width: 100%;
+    min-width: 0;
     @include flex($direction: column, $gap: 32px, $align: center, $flex: 1);
 
     padding: 48px 24px;
@@ -25,13 +25,7 @@
     }
 
     .price-tittle {
-      @include flex(
-        $direction: column,
-        $justify: center,
-        $align: center,
-        $gap: 8px
-      );
-
+      @include flex($direction: column, $gap: 8px);
       &__plan {
         font-weight: bold;
         font-size: pxToRem(32);
@@ -39,7 +33,12 @@
       }
 
       &__sub {
+        flex: 1;
         line-height: 140%;
+        @include desktop {
+          font-size: pxToRem(18);
+          white-space: nowrap;
+        }
       }
 
       &__sub,
