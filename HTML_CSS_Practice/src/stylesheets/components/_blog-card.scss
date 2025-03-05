@@ -1,0 +1,70 @@
+@use "../abstracts/" as *;
+
+.blog-card {
+  @include flex(
+    $direction: row,
+    $wrap: wrap,
+    $gap: 16px,
+    $justify: center,
+    $align: center
+  );
+
+  @include tablet {
+    gap: 80px;
+  }
+
+  @include desktop {
+    @include flex($wrap: nowrap, $gap: 16px);
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__box {
+    @include flex($direction: column, $align: center);
+    height: 500px;
+    border: $border-bot 1px solid;
+    max-width: 361px;
+
+    @include desktop {
+      max-width: 308px;
+      min-width: 0;
+    }
+  }
+
+  &__text {
+    padding: 24px 16px 16px;
+    @include flex($direction: column, $gap: 16px);
+
+    .category-box {
+      @include flex($direction: column, $gap: 4px);
+
+      .category {
+        font-weight: $medium;
+        line-height: 110%;
+      }
+
+      .title {
+        font-size: pxToRem(20);
+      }
+    }
+
+    .user {
+      padding-top: 16px;
+      @include flex($direction: row, $gap: 16px, $align: center);
+
+      &__info {
+        @include flex($direction: column, $justify: center);
+      }
+
+      &__name {
+        font-weight: $medium;
+      }
+
+      &__role {
+        color: $sec-text;
+      }
+    }
+  }
+}
