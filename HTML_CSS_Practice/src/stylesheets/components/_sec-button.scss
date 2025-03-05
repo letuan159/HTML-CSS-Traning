@@ -25,9 +25,9 @@
 
   @include desktop {
     &:hover {
-      background-color: darken($default, 10%);
+      background-color: adjust-color($default, $lightness: -10%);
       .btn-text {
-        color: lighten($pri-btn, 20%);
+        color: adjust-color($pri-btn, $lightness: 20%);
       }
     }
   }
