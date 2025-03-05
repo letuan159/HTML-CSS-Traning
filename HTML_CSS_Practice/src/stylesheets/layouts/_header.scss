@@ -113,15 +113,15 @@
 
   //Start style for bottom header
   &__bottom {
+    background-color: $bg-bot;
+
+    padding: 48px 16px;
+
     @include flex($align: center, $direction: column, $gap: 32px);
 
     @include desktop {
       @include flex($direction: row, $justify: space-between, $gap: 80px);
     }
-
-    background-color: $bg-bot;
-
-    padding: 48px 16px;
 
     @include tablet {
       padding: 80px 80px;
@@ -130,9 +130,9 @@
     .hero-content {
       @include flex($direction: column, $align: center, $gap: 48px);
       @include desktop {
-        @include flex($align: flex-start, $gap: 64px);
         flex: 1;
         padding: 32px 0px;
+        @include flex($align: flex-start, $gap: 64px);
       }
 
       &__text {
@@ -212,15 +212,15 @@
         .pri-btn {
           padding: 8px 12px;
 
-          @include tablet {
-            padding: 16px;
-          }
-
           flex: 1;
 
           min-width: 0;
 
           white-space: nowrap;
+
+          @include tablet {
+            padding: 16px;
+          }
         }
       }
     }
