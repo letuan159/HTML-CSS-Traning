@@ -3,18 +3,19 @@
 .author-card-box {
   @include flex($direction: row, $justify: center, $gap: 8px);
 
+  @include desktop {
+    gap: 16px;
+  }
+
   .arrow {
-    @include flex($align: center);
     transition: transform 0.3s ease;
+
+    @include flex($align: center);
 
     &:hover {
       transform: scale(1.5); /* tăng kích thước lên 1.5 lần */
       cursor: pointer;
     }
-  }
-
-  @include desktop {
-    gap: 16px;
   }
 
   .author-card {
@@ -24,13 +25,6 @@
 
     padding: 24px;
 
-    &:nth-of-type(2) {
-      display: none;
-      @include tablet {
-        @include flex();
-      }
-    }
-
     @include flex(
       $direction: column,
       $justify: center,
@@ -38,6 +32,13 @@
       $gap: 16px,
       $flex: 1
     );
+
+    &:nth-of-type(2) {
+      display: none;
+      @include tablet {
+        @include flex();
+      }
+    }
 
     &__text {
       font-size: pxToRem(18);
