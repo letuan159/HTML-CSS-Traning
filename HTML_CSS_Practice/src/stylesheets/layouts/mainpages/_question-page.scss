@@ -2,6 +2,7 @@
 
 .question-page {
   background-color: $bg-bot;
+  padding: 48px 16px;
 
   @include flex(
     $direction: column,
@@ -9,8 +10,6 @@
     $align: center,
     $justify: center
   );
-
-  padding: 48px 16px;
 
   @include desktop {
     gap: 64px;
