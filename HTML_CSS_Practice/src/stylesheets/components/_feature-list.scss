@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.feature-list {
+  @include flex($direction: column, $gap: 8px);
+
+  figure {
+    @include flex($direction: row, $gap: 8px);
+    font-size: pxToRem(18);
+    line-height: 140%;
+  }
+}

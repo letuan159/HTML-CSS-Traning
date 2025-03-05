@@ -1,0 +1,14 @@
+<ul class="feature-list">
+  <each loop="item, index in {{list}}">
+    <if
+      condition="(type === 'Freelancer'  && index < 5) || (type === 'Professional'  && index < 8) || (type === 'Agency')"
+    >
+      <li>
+        <figure>
+          <img src="../assets/icons/check.svg" alt="Check icon" />
+          <figcaption>{{item}}</figcaption>
+        </figure>
+      </li>
+    </if>
+  </each>
+</ul>

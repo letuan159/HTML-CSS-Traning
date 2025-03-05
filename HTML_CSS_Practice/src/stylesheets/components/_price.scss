@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+
+.price-text {
+  @include flex(
+    $direction: column,
+    $justify: center,
+    $align: center,
+    $gap: 8px
+  );
+
+  .discount {
+    position: relative;
+    display: inline-block;
+    font-size: pxToRem(54);
+    font-weight: bold;
+    color: $discount-text;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 60%;
+      width: 100%;
+      height: 3px;
+      background-color: $discount-text;
+      transform: translateY(-50%);
+    }
+  }
+
+  .description {
+    font-size: pxToRem(14);
+  }
+
+  .discount,
+  .price {
+    font-size: pxToRem(54);
+    font-weight: bold;
+    line-height: 110%;
+  }
+}

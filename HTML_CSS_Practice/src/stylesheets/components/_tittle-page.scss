@@ -1,6 +1,22 @@
 @use "../abstracts/" as *;
 
 .page-header {
+
+  @include flex(
+    $direction: column,
+    $gap: 24px,
+    $align: center,
+    $justify: center
+  );
+
+  .tittle-box {
+    @include flex(
+      $direction: column,
+      $gap: 8px,
+      $align: center,
+      $justify: center
+    );
+  }
   @include flex(
     $direction: column,
     $gap: 8px,
@@ -32,5 +48,13 @@
   &__tittle {
     text-align: center;
     font-weight: bold;
+  }
+
+  &__description {
+    line-height: 140%;
+    text-align: center;
+    @include desktop {
+      font-size: pxToRem(18);
+    }
   }
 }

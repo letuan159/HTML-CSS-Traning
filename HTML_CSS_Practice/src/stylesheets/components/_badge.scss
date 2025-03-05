@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.badge {
+  position: absolute;
+  line-height: 140%;
+  background-color: $bg-bot;
+}
