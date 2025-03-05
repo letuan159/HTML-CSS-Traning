@@ -3,18 +3,19 @@
 .author-card-box {
   @include flex($direction: row, $justify: center, $gap: 8px);
 
+  @include desktop {
+    gap: 16px;
+  }
+
   .arrow {
-    @include flex($align: center);
     transition: transform 0.3s ease;
+
+    @include flex($align: center);
 
     &:hover {
       transform: scale(1.5); /* tăng kích thước lên 1.5 lần */
       cursor: pointer;
     }
-  }
-
-  @include desktop {
-    gap: 16px;
   }
 
   .author-card {
