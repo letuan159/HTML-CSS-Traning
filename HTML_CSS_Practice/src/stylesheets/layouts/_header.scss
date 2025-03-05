@@ -191,7 +191,7 @@
 
           @include desktop {
             figure {
-              @include flex($wrap: nowrap);
+              @include flex($justify: center, $align: center, $wrap: nowrap);
             }
           }
         }
