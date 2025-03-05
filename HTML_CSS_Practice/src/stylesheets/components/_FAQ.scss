@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+
+.question-contain {
+  background-color: $default;
+  padding: 16px;
+  @include flex(
+    $direction: row,
+    $justify: space-between,
+    $gap: 8px,
+    $align: center
+  );
+
+  @include desktop {
+    width: 900px;
+  }
+
+  .question {
+    font-weight: bold;
+    font-size: pxToRem(18);
+    line-height: 110%;
+
+    @include desktop {
+      font-size: pxToRem(20);
+    }
+  }
+}

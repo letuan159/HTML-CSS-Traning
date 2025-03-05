@@ -1,0 +1,23 @@
+@use "../../abstracts/" as *;
+
+.question-page {
+  background-color: $bg-bot;
+
+  @include flex(
+    $direction: column,
+    $gap: 32px,
+    $align: center,
+    $justify: center
+  );
+
+  padding: 48px 16px;
+
+  @include desktop {
+    gap: 64px;
+    padding: 80px;
+  }
+
+  .FAQ-box {
+    @include flex($direction: column, $gap: 16px, $justify: center);
+  }
+}
