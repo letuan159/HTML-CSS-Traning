@@ -9,13 +9,14 @@
 
   .price-card {
     min-width: 0;
-    @include flex($direction: column, $gap: 32px, $align: center, $flex: 1);
 
     padding: 48px 24px;
 
     border: 1px solid $border-bot;
 
     position: relative;
+
+    @include flex($direction: column, $gap: 32px, $align: center, $flex: 1);
 
     .badge {
       top: -12px;

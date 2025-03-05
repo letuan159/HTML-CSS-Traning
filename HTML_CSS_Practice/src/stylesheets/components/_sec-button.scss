@@ -21,14 +21,11 @@
     transition: color 0.3s ease;
   }
 
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition: all 0.3s ease;
 
   @include desktop {
     &:hover {
-      background-color: adjust-color($default, $lightness: -10%);
-      .btn-text {
-        color: adjust-color($pri-btn, $lightness: 20%);
-      }
+      transform: scale(1.05);
     }
   }
 

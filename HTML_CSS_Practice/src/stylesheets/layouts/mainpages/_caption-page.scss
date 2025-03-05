@@ -20,7 +20,6 @@
 
   .tools {
     @include flex($gap: 24px);
-    max-width: 1000px;
 
     &__item {
       @include flex($direction: column, $gap: 24px);
