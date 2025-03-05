@@ -19,12 +19,6 @@
   }
 
   .author-card {
-    border: 1px $border-bot solid;
-
-    background-color: $default;
-
-    padding: 24px;
-
     @include flex(
       $direction: column,
       $justify: center,
@@ -32,6 +26,12 @@
       $gap: 16px,
       $flex: 1
     );
+
+    border: 1px $border-bot solid;
+
+    background-color: $default;
+
+    padding: 24px;
 
     &:nth-of-type(2) {
       display: none;
