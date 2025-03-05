@@ -1,0 +1,65 @@
+<footer class="footer-main">
+  <div class="footer-main__top">
+    <figure>
+      <img src="../assets/icons/logo-footer.svg" alt="" />
+    </figure>
+
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="Enter your email to get the latest news..."
+        class="search-input"
+      />
+
+      <include
+        src="./components/pri-button.html"
+        locals='{
+        "btnText" : "Subscribe"
+      }'
+      >
+      </include>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="footer-main__mid">
+    <include
+      src="./components/footer-list.html"
+      locals='{
+        "columns" : [
+          {
+            "index": "Column One",
+            "list" : ["Twenty One", "Thirty Two", "Fourty Three", "Fifty Four"]
+          },
+          {
+            "index": "Column Two",
+            "list" : ["Sixty Five", "Seventy Six", "Eighty Seven", "Ninety Eight"]
+          },
+          {
+            "index": "Column Three",
+            "list" : ["One Two", "Three Four", "Five Six", "Seven Eight"]
+          },
+          {
+            "index": "Column Four"
+          }
+        ]
+      }'
+    >
+    </include>
+  </div>
+
+  <hr />
+
+  <div class="footer-main__bottom">
+    <p class="copyright">CompanyName @ 202X. All rights reserved.</p>
+
+    <include
+      src="./components/list.html"
+      locals='{
+        "list" : "[`Eleven`, `Twelve`, `Thirteen`]"
+      }'
+    >
+    </include>
+  </div>
+</footer>
