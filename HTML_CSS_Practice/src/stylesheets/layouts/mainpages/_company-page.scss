@@ -4,10 +4,11 @@
   background-color: $bg-bot;
   &__top {
     display: none;
+    padding: 80px 80px 0;
+
     @include desktop {
       @include flex($direction: column, $gap: 48px);
     }
-    padding: 80px 80px 0;
 
     .page-header {
       @include desktop {
