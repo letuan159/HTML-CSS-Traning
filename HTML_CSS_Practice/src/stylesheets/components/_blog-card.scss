@@ -22,10 +22,10 @@
   }
 
   &__box {
-    @include flex($direction: column, $align: center);
     height: 500px;
     border: $border-bot 1px solid;
     max-width: 361px;
+    @include flex($direction: column, $align: center);
 
     @include desktop {
       max-width: 308px;

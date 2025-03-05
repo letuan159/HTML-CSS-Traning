@@ -68,19 +68,19 @@
 
         //style for a tag of desktop
         .link {
-          @include flex($align: center, $justify: center, $gap: 8px);
-
           padding: 12px 8px;
           font-size: pxToRem(16);
           font-weight: $medium;
           color: $pri-text;
+          transition: transform 0.3s ease;
+
+          @include flex($align: center, $justify: center, $gap: 8px);
 
           &__icon {
             width: 24px;
             height: 24px;
           }
 
-          transition: transform 0.3s ease;
           &:hover {
             transform: scale(1.2);
             cursor: pointer;

@@ -18,6 +18,12 @@
   }
 
   .author-card {
+    border: 1px $border-bot solid;
+
+    background-color: $default;
+
+    padding: 24px;
+
     &:nth-of-type(2) {
       display: none;
       @include tablet {
@@ -33,26 +39,20 @@
       $flex: 1
     );
 
-    border: 1px $border-bot solid;
-
-    background-color: $default;
-
-    padding: 24px;
-
     &__text {
       font-size: pxToRem(18);
       text-align: center;
     }
 
     &__user {
+      padding-top: 16px;
+
       @include flex(
         $direction: column,
         $align: center,
         $justify: center,
         $gap: 16px
       );
-
-      padding-top: 16px;
     }
 
     &__info {
