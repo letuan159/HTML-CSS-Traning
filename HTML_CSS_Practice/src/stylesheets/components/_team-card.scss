@@ -35,8 +35,13 @@
     }
 
     .sec-btn {
-      max-width: 180px;
-      max-height: 48px;
+      width: 172.5px;
+      height: 48px;
+
+      @include desktop {
+        width: 180px;
+      }
+
     }
   }
 }
