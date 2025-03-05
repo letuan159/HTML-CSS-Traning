@@ -9,10 +9,9 @@
   >
   </include>
 
-  <div class="tools__icon">
-    <include
-      src="./components/tools-card.html"
-      locals='{
+  <include
+    src="./components/tools-card.html"
+    locals='{
         "icons": [
           { "src": "calendar.svg", "alt": "Calendar icon", "text": "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse." },
           { "src": "luggage.svg", "alt": "Luggage icon", "text": "Id eros pellentesque facilisi id mollis faucibus commodo enim." },
@@ -20,10 +19,13 @@
           { "src": "car.svg", "alt": "Car icon", "text": "Imperdiet purus pellentesque sit mi nibh sit integer faucibus." }
         ]
       }'
-    ></include>
-  </div>
+  ></include>
 
-  <div class="tools_button">
-    <button>Primary Action</button>
-  </div>
+  <include
+    src="./components/pri-button.html"
+    locals='{
+      "btnText" : "Primary Action"
+    }'
+  >
+  </include>
 </section>
