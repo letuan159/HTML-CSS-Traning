@@ -9,17 +9,13 @@
     padding: 16px;
     border-bottom: $border-bot 1px solid;
 
-    @include desktop {
+    @include tablet {
       padding: 16px 80px;
     }
 
     //style for navbar
     .nav {
       @include flex($align: center, $justify: space-between);
-
-      @include tablet {
-        @include flex($justify: space-evenly);
-      }
 
       @include desktop {
         @include flex($justify: space-between);
@@ -29,14 +25,10 @@
       &__buttons {
         display: none;
 
-        @include tablet {
-          @include flex($align: center, $justify: center, $gap: 16px);
-          width: 437.5px;
-          height: 48px;
-        }
-
         @include desktop {
           @include flex($align: center, $justify: flex-end, $gap: 16px);
+          width: 437.5px;
+          height: 48px;
         }
 
         .pri-btn {
@@ -72,7 +64,7 @@
           font-size: pxToRem(16);
           font-weight: $medium;
           color: $pri-text;
-          transition: transform 0.3s ease;
+          transition: all 0.3s ease;
 
           @include flex($align: center, $justify: center, $gap: 8px);
 
@@ -84,6 +76,10 @@
           &:hover {
             transform: scale(1.2);
             cursor: pointer;
+          }
+
+          &:active {
+            color: $pri-btn;
           }
         }
       }
@@ -106,6 +102,13 @@
       &__plus {
         @include desktop {
           display: none;
+        }
+
+        img {
+          transition: transform 0.5s ease;
+          &:active {
+            transform: rotate(180deg);
+          }
         }
       }
     }
@@ -136,7 +139,7 @@
       }
 
       &__text {
-        @include flex($direction: column, $align: center, $gap: 24px);
+        @include flex($direction: column, $align: flex-start, $gap: 24px);
         @include desktop {
           gap: 48px;
         }
@@ -169,9 +172,10 @@
       }
 
       &__buttons {
-        @include flex($direction: row, $gap: 16px);
+        @include flex($direction: row, $gap: 16px, $wrap: wrap);
 
         .pri-btn {
+          @include flex($align: center);
           &__icon {
             display: none;
             @include desktop {
@@ -212,12 +216,8 @@
         .pri-btn {
           padding: 8px 12px;
 
-          flex: 1;
-
           min-width: 0;
-
-          white-space: nowrap;
-
+          flex: 1;
           @include tablet {
             padding: 16px;
           }
@@ -226,6 +226,8 @@
     }
 
     .hero-image {
+      animation: upDown 2.5s infinite linear;
+
       @include desktop {
         flex: 1;
       }

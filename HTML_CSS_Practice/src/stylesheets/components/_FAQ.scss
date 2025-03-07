@@ -3,12 +3,30 @@
 .question-contain {
   background-color: $default;
   padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
   @include flex(
     $direction: row,
     $justify: space-between,
     $gap: 8px,
     $align: center
   );
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  .plus-black {
+    transition: transform 0.3s ease;
+  }
+
+  &:active {
+    background-color: $border-bot;
+    .plus-black {
+      transform: rotate(180deg);
+    }
+  }
 
   @include desktop {
     width: 900px;
@@ -18,6 +36,8 @@
     font-weight: bold;
     font-size: pxToRem(18);
     line-height: 110%;
+
+    @include line-clamp($line: 1);
 
     @include desktop {
       font-size: pxToRem(20);

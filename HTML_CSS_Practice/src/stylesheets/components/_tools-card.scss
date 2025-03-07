@@ -17,14 +17,21 @@
       $direction: column,
       $gap: 16px,
       $align: center,
-      $justify: center
+      $justify: flex-start
     );
+
+    &:hover {
+      animation: shake 0.5s ease-in-out;
+    }
+
     @include tablet {
       flex: 0 1 45%;
     }
   }
 
   &__description {
+    @include line-clamp($line: 5);
+
     @include tablet {
       font-size: 17px;
     }

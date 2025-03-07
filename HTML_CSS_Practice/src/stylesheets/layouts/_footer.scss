@@ -92,13 +92,22 @@
 
         &__item {
           font-weight: $medium;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:active {
+            color: $pri-btn;
+          }
         }
       }
 
       .get-app-box {
         @include flex($direction: column, $gap: 16px);
         .get-app {
-          @include flex($direction: row, $gap: 8px);
+          @include flex($direction: row, $gap: 8px, $wrap: wrap);
+          img {
+            cursor: pointer;
+          }
         }
       }
 
@@ -136,7 +145,13 @@
         font-size: pxToRem(16);
         font-weight: $medium;
         color: $default;
-        cursor: default;
+        cursor: pointer;
+
+        transition: all 0.3s ease;
+
+        &:active {
+          color: $pri-btn;
+        }
       }
     }
   }
