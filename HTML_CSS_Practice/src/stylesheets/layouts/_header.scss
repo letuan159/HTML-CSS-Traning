@@ -175,7 +175,7 @@
         @include flex($direction: row, $gap: 16px, $wrap: wrap);
 
         .pri-btn {
-          @include flex($align: center);
+          @include flex($align: center, $justify: center);
           &__icon {
             display: none;
             @include desktop {
