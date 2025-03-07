@@ -21,17 +21,19 @@
   .author-card {
     @include flex(
       $direction: column,
-      $justify: center,
+      $justify: space-between,
       $align: center,
       $gap: 16px,
       $flex: 1
     );
 
     border: 1px $border-bot solid;
-
+    cursor: pointer;
     background-color: $default;
 
     padding: 24px;
+
+    transition: all 0.3s ease;
 
     &:nth-of-type(2) {
       display: none;
@@ -40,9 +42,19 @@
       }
     }
 
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &:active {
+      opacity: 0.5;
+      border: 2px solid $pri-btn;
+    }
+
     &__text {
       font-size: pxToRem(18);
       text-align: center;
+      @include line-clamp($line: 7);
     }
 
     &__user {

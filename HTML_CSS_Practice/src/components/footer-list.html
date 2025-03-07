@@ -11,7 +11,7 @@
 
     <!-- Column 4 -->
     <if condition="column.index === 'Column Four'">
-      <div class="get-app-box">
+      <ul class="get-app-box">
         <li class="column__index">{{column.index}}</li>
 
         <figure class="get-app">
@@ -19,9 +19,9 @@
 
           <img src="../assets/icons/google-play.svg" alt="" />
         </figure>
-      </div>
+      </ul>
 
-      <div class="join-us-box">
+      <ul class="join-us-box">
         <li class="column__index">Join Us</li>
 
         <include
@@ -37,7 +37,7 @@
             }'
         >
         </include>
-      </div>
+      </ul>
     </if>
   </ul>
 </each>

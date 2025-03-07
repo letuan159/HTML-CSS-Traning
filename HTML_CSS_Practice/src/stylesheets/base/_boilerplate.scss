@@ -9,7 +9,11 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(-20px);
+
+  animation: fadeSlideIn 1s ease forwards;
 }
