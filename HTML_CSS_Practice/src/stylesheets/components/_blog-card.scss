@@ -22,10 +22,23 @@
   }
 
   &__box {
+    @include flex($direction: column, $align: center);
+
     height: 500px;
     border: $border-bot 1px solid;
     max-width: 361px;
-    @include flex($direction: column, $align: center);
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      border: 2px solid $pri-btn;
+      opacity: 0.5;
+    }
 
     @include desktop {
       max-width: 308px;
@@ -35,6 +48,7 @@
 
   &__text {
     padding: 24px 16px 16px;
+
     @include flex($direction: column, $gap: 16px);
 
     .category-box {
@@ -48,6 +62,10 @@
       .title {
         font-size: pxToRem(20);
       }
+    }
+
+    .description {
+      @include line-clamp($line: 2);
     }
 
     .user {

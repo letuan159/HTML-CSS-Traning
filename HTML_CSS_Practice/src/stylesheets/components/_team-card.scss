@@ -20,6 +20,15 @@
   .card {
     @include flex($direction: column, $gap: 16px, $align: center, $flex: 1 1 0);
 
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: $border-bot;
+      transform: scale(1.05);
+    }
+
     .name-role {
       @include flex($direction: column, $align: center);
       .name {
