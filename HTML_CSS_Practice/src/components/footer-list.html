@@ -11,22 +11,32 @@
 
     <!-- Column 4 -->
     <if condition="column.index === 'Column Four'">
-      <ul class="get-app-box">
-        <li class="column__index">{{column.index}}</li>
+      <li class="footer-list">
+        <ul class="get-app-box">
+          <li class="column__index">{{column.index}}</li>
 
-        <figure class="get-app">
-          <img src="../assets/icons/app-store.svg" alt="" />
+          <li>
+            <figure class="get-app">
+              <img
+                src="../assets/icons/app-store.svg"
+                alt="dowwnload on app-store"
+              />
 
-          <img src="../assets/icons/google-play.svg" alt="" />
-        </figure>
-      </ul>
+              <img
+                src="../assets/icons/google-play.svg"
+                alt="dowwnload on google-play"
+              />
+            </figure>
+          </li>
+        </ul>
 
-      <ul class="join-us-box">
-        <li class="column__index">Join Us</li>
+        <ul class="join-us-box">
+          <li class="column__index">Join Us</li>
 
-        <include
-          src="./components/branch.html"
-          locals='{
+          <li>
+            <include
+              src="./components/branch.html"
+              locals='{
               "icons": [
                 { "src": "youtube.svg", "alt": "Youtube icon" },
                 { "src": "facebook.svg", "alt": "Facebook icon" },
@@ -35,9 +45,11 @@
                 { "src": "linkedin.svg", "alt": "Linkedin icon" }
               ]
             }'
-        >
-        </include>
-      </ul>
+            >
+            </include>
+          </li>
+        </ul>
+      </li>
     </if>
   </ul>
 </each>
