@@ -44,3 +44,17 @@
     flex: $flex;
   }
 }
+
+@mixin line-clamp(
+  $display: -webkit-box,
+  $-webkit-box-orient: vertical,
+  $overflow: hidden,
+  $line: false
+) {
+  display: $display;
+  -webkit-box-orient: $-webkit-box-orient;
+  overflow: $overflow;
+  @if $line {
+    -webkit-line-clamp: $line;
+  }
+}
