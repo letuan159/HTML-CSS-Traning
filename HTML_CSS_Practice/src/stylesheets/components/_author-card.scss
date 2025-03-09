@@ -55,6 +55,14 @@
       font-size: pxToRem(18);
       text-align: center;
       @include line-clamp($line: 7);
+
+      @include tablet {
+        @include line-clamp($line: 5);
+      }
+
+      @include desktop {
+        @include line-clamp($line: 3);
+      }
     }
 
     &__user {

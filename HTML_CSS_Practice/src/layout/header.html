@@ -28,16 +28,18 @@
 
       <div class="nav__buttons">
         <include
-          src="./components/sec-button.html"
+          src="./components/buttons.html"
           locals='{
+            "typeButton" : "sec",
             "btnText" : "Log In"
           }'
         >
         </include>
 
         <include
-          src="./components/pri-button.html"
+          src="./components/buttons.html"
           locals='{
+            "typeButton" : "pri",
             "btnText" : "Start Free Trial"
           }'
         >
@@ -75,8 +77,9 @@
           </figure>
         </button>
         <include
-          src="./components/sec-button.html"
+          src="./components/buttons.html"
           locals='{
+            "typeButton" : "sec",
             "btnText" : "Secondary Action"
           }'
         >

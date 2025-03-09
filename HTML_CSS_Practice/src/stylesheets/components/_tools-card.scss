@@ -34,6 +34,7 @@
 
     @include tablet {
       font-size: 17px;
+      @include line-clamp($line: 4);
     }
     @include desktop {
       font-size: pxToRem(18);

@@ -12,4 +12,8 @@
   @include desktop {
     padding: 80px;
   }
+
+  .tools__description {
+    @include line-clamp($line: 2);
+  }
 }
