@@ -27,5 +27,11 @@
     @include desktop {
       padding: 80px 80px;
     }
+
+    .branch {
+      @include desktop {
+        gap: 58px;
+      }
+    }
   }
 }
